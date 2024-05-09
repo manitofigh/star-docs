@@ -1,8 +1,8 @@
 ---
-title: CacheAdvance.flush()
+title: Star HPC.flush()
 nextjs:
   metadata:
-    title: CacheAdvance.flush()
+    title: Star HPC.flush()
     description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

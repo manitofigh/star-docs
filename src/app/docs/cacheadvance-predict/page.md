@@ -1,8 +1,8 @@
 ---
-title: CacheAdvance.predict()
+title: Star HPC.predict()
 nextjs:
   metadata:
-    title: CacheAdvance.predict()
+    title: Star HPC.predict()
     description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

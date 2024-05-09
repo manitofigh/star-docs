@@ -22,11 +22,11 @@ const lexend = localFont({
 
 export const metadata = {
   title: {
-    template: '%s - Docs',
-    default: 'CacheAdvance - Never miss the cache again.',
+    template: '%s - Star HPC Docs',
+    default: 'Star HPC Docs',
   },
   description:
-    'Cache every single thing your app could ever do ahead of time, so your code never even has to run at all.',
+    'A collection of guides and tutorials for using the Star HPC',
 }
 
 export default function RootLayout({ children }) {

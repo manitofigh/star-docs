@@ -39,10 +39,10 @@ export const navigation = [
   {
     title: 'API reference',
     links: [
-      { title: 'CacheAdvance.predict()', href: '/docs/cacheadvance-predict' },
-      { title: 'CacheAdvance.flush()', href: '/docs/cacheadvance-flush' },
-      { title: 'CacheAdvance.revert()', href: '/docs/cacheadvance-revert' },
-      { title: 'CacheAdvance.regret()', href: '/docs/cacheadvance-regret' },
+      { title: 'Star HPC.predict()', href: '/docs/cacheadvance-predict' },
+      { title: 'Star HPC.flush()', href: '/docs/cacheadvance-flush' },
+      { title: 'Star HPC.revert()', href: '/docs/cacheadvance-revert' },
+      { title: 'Star HPC.regret()', href: '/docs/cacheadvance-regret' },
     ],
   },
   {

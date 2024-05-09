@@ -2,111 +2,105 @@
 title: About Star
 ---
 
-Learn how to get CacheAdvance set up in your project in under thirty minutes or it's free. {% .lead %}
+The Star HPC Cluster is a computing facility designed for a variety of research and computational tasks. It combines advanced computing nodes and a high-speed storage system with a suite of software applications. {% .lead %}
+
+Here are some quick links, but before clicking them, there's more to cover on this page if it's your first time landing here!
 
 {% quick-links %}
 
-{% quick-link title="Installation" icon="installation" href="/" description="Step-by-step guides to setting up your system and installing the library." /%}
+{% quick-link title="Getting Help" icon="lightbulb" href="/" description="Take a look at the FAQs, how to write good support requests, and where to contact us." /%}
 
-{% quick-link title="Architecture guide" icon="presets" href="/" description="Learn how the internals work and contribute." /%}
+{% quick-link title="Jobs" icon="presets" href="/" description="Jobs here, jobs there, jobs everywhere. What are jobs on the cluster, really?" /%}
 
-{% quick-link title="Plugins" icon="plugins" href="/" description="Extend the library with third-party plugins or write your own." /%}
+{% quick-link title="Software" icon="plugins" href="/" description="Learn how to load and use the software you need." /%}
 
-{% quick-link title="API reference" icon="theming" href="/" description="Learn to easily customize and modify your app's visual design to fit your brand." /%}
+{% quick-link title="Storage" icon="theming" href="/" description="How much storage is available? How to transfer files back and forth?" /%}
 
 {% /quick-links %}
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste.
-
 ---
 
-## Quick start
+## Overview
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+We know digesting all the 'overall' information at once — and possibly for the first time — is intimidating. Not everything is supposed to make sense as of now, but it will as you go through more sections of the documentation.
 
-### Installing dependencies
+### Software
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+#### SLURM (Simple Linux Utility for Resource Management) 
+[Slurm](https://slurm.schedmd.com/documentation.html) is our chosen job scheduler and queueing system that efficiently manages resource allocation, ensuring everyone gets the right amount of resources at the right time. 
 
-```shell
-npm install @tailwindlabs/cache-advance
-```
+#### Apptainer (formerly Singularity) 
+[Apptainer](https://apptainer.org/), another major application on the cluster, is a containerization platform similar to [Docker](https://www.docker.com/) with the major difference that it runs under user privileges instead of `root`. This platform is enhanced by [NGC](https://www.nvidia.com/en-us/gpu-cloud/) (NVIDIA GPU Cloud) which provides access to a wide array of pre-built, GPU-optimized software containers for diverse applications. This integration saves all users a lot of time as they don’t need to set up the software applications from scratch and can just pull and use the NGC images with Apptainer.
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+The cluster also supports various software applications tailored to different needs: [Python](https://docs.python.org/3.12/tutorial/index.html) and [R](https://www.r-project.org/) for data analysis, [MATLAB](https://www.mathworks.com/products/matlab.html) for technical computing, [Jupyter](https://jupyter.org/) for interactive projects, and [OpenMPI](https://www.open-mpi.org/) for parallel computing. [Anaconda](https://www.anaconda.com/) broadens these capabilities with packages for scientific computing, while [NetCDF](https://www.unidata.ucar.edu/software/netcdf/) manages large datasets. For big data tasks, [Hadoop](https://hadoop.apache.org/) and [Spark](https://spark.apache.org/) offer powerful processing tools.
 
-{% callout type="warning" title="Oh no! Something bad happened!" %}
+
+
+<!-- {% callout type="warning" title="Oh no! Something bad happened!" %}
 This is what a disclaimer message looks like. You might want to include inline `code` in it. Or maybe you’ll want to include a [link](/) in it. I don’t think we should get too carried away with other scenarios like lists or tables — that would be silly.
-{% /callout %}
+{% /callout %} -->
 
-### Configuring the library
+### Hardware
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+#### Login Node
 
-```js
-// cache-advance.config.js
-export default {
-  strategy: 'predictive',
-  engine: {
-    cpus: 12,
-    backups: ['./storage/cache.wtf'],
-  },
-}
-```
+#### Compute Nodes
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+* Two Apollo 6500 Gen10+ HPE nodes, *each* containing 8 NVIDIA A100 SXM GPUs. 
+* One HPE ProLiant DL385 Gen10+ v2, containing 2 A30 SXM NVIDIA GPUs.
 
-{% callout title="You should know!" %}
+##### HPE Apollo 6500 Gen10
+
+| Attribute\Node Name          | gpu1                             | gpu2                             |
+|------------------------|----------------------------------|----------------------------------|
+| Model Name             | HPE ProLiant XL675d Gen10 Plus; Apollo 6500 Gen10 Plus Chassis | HPE ProLiant XL675d Gen10 Plus; Apollo 6500 Gen10 Plus Chassis |
+| Sockets                | 2                                | 2                                |
+| Cores per Socket       | 32                               | 32                               |
+| Threads per Core       | 2                                | 2                                |
+| Memory                 | 1024 GiB Total Memory (16 x 64GiB DIMM DDR4) | 1024 GiB Total Memory (16 x 64GiB DIMM DDR4) |
+| GPU                    | 8 SXM NVIDIA A100s               | 8 SXM NVIDIA A100s               |
+| Local Storage (Scratch space) | 407GB                       | 407GB                       |
+
+
+##### HPE DL385 Gen10
+
+| Attribute\Node Name              | cn01                                      |
+|------------------------|-------------------------------------------|
+| Model Name             | HPE ProLiant DL385 Gen10 Plus v2          |
+| Sockets                | 2                                         |
+| Cores per Socket       | 32                                        |
+| Threads per Core       | 2                                         |
+| Memory                 | 256GiB Total Memory (16 x 16GiB DIMM DDR4)|
+| GPU                    | 2 SXM NVIDIA A30s                         | 
+| Local Storage (Scratch Space)         | 854G                                      |
+
+#### Storage System
+Our storage system contains of four HPE PFSS nodes, collectively offering a total of 63TB of storage. You can think of these four nodes as one unified 63TB storage unit as it is a **Parallel File System Storage** component. These nodes work in parallel and are all mounted under **one** mount point on the gpu nodes only (`/fs1`).
+
+## Our vision
+
+Making complex and time-intensive calculations simple and accessible.
+
+### Our Goal
+
+Our heart is set on creating a community where our cluster is a symbol of collaboration and discovery. We are wishing to provide a supportive space where researchers and students can express their scientific ideas and explore unchanted areas. We aim to make the complicated world of computational research a shared path of growth, learning, and significant discoveries for the ones that are eager to learn.
+
+
+## Operations Team
+
+* Alexander Rosenberg
+* Mani Tofigh
+
+
+## The Board
+
+* Edward H. Currie
+* Daniel P. Miller
+* Adam C. Durst
+* Jason D. Williams
+* Thomas G. Re
+* Oren Segal
+* John Ortega
+<!-- {% callout title="You should know!" %}
 This is what a disclaimer message looks like. You might want to include inline `code` in it. Or maybe you’ll want to include a [link](/) in it. I don’t think we should get too carried away with other scenarios like lists or tables — that would be silly.
-{% /callout %}
-
----
-
-## Basic usage
-
-Praesentium laudantium magni. Consequatur reiciendis aliquid nihil iusto ut in et. Quisquam ut et aliquid occaecati. Culpa veniam aut et voluptates amet perspiciatis. Qui exercitationem in qui. Vel qui dignissimos sit quae distinctio.
-
-### Your first cache
-
-Minima vel non iste debitis. Consequatur repudiandae et quod accusamus sit molestias consequatur aperiam. Et sequi ipsa eum voluptatibus ipsam. Et quisquam ut.
-
-Qui quae esse aspernatur fugit possimus. Quam sed molestiae temporibus. Eum perferendis dignissimos provident ea et. Et repudiandae quasi accusamus consequatur dolore nobis. Quia reiciendis necessitatibus a blanditiis iste quia. Ut quis et amet praesentium sapiente.
-
-Atque eos laudantium. Optio odit aspernatur consequuntur corporis soluta quidem sunt aut doloribus. Laudantium assumenda commodi.
-
-### Clearing the cache
-
-Vel aut velit sit dolor aut suscipit at veritatis voluptas. Laudantium tempore praesentium. Qui ut voluptatem.
-
-Ea est autem fugiat velit esse a alias earum. Dolore non amet soluta eos libero est. Consequatur qui aliquam qui odit eligendi ut impedit illo dignissimos.
-
-Ut dolore qui aut nam. Natus temporibus nisi voluptatum labore est ex error vel officia. Vero repellendus ut. Suscipit voluptate et placeat. Eius quo corporis ab et consequatur quisquam. Nihil officia facere dolorem occaecati alias deleniti deleniti in.
-
-### Adding middleware
-
-Officia nobis tempora maiores id iusto magni reprehenderit velit. Quae dolores inventore molestiae perspiciatis aut. Quis sequi officia quasi rem officiis officiis. Nesciunt ut cupiditate. Sunt aliquid explicabo enim ipsa eum recusandae. Vitae sunt eligendi et non beatae minima aut.
-
-Harum perferendis aut qui quibusdam tempore laboriosam voluptatum qui sed. Amet error amet totam exercitationem aut corporis accusantium dolorum. Perspiciatis aut animi et. Sed unde error ut aut rerum.
-
-Ut quo libero aperiam mollitia est repudiandae quaerat corrupti explicabo. Voluptas accusantium sed et doloribus voluptatem fugiat a mollitia. Numquam est magnam dolorem asperiores fugiat. Soluta et fuga amet alias temporibus quasi velit. Laudantium voluptatum perspiciatis doloribus quasi facere. Eveniet deleniti veniam et quia veritatis minus veniam perspiciatis.
-
----
-
-## Getting help
-
-Consequuntur et aut quisquam et qui consequatur eligendi. Necessitatibus dolorem sit. Excepturi cumque quibusdam soluta ullam rerum voluptatibus. Porro illo sequi consequatur nisi numquam nisi autem. Ut necessitatibus aut. Veniam ipsa voluptatem sed.
-
-### Submit an issue
-
-Inventore et aut minus ut voluptatem nihil commodi doloribus consequatur. Facilis perferendis nihil sit aut aspernatur iure ut dolores et. Aspernatur odit dignissimos. Aut qui est sint sint.
-
-Facere aliquam qui. Dolorem officia ipsam adipisci qui molestiae. Error voluptatem reprehenderit ex.
-
-Consequatur enim quia maiores aperiam et ipsum dicta. Quam ut sit facere sit quae. Eligendi veritatis aut ut veritatis iste ut adipisci illo.
-
-### Join the community
-
-Praesentium facilis iste aliquid quo quia a excepturi. Fuga reprehenderit illo sequi voluptatem voluptatem omnis. Id quia consequatur rerum consectetur eligendi et omnis. Voluptates iusto labore possimus provident praesentium id vel harum quisquam. Voluptatem provident corrupti.
-
-Eum et ut. Qui facilis est ipsa. Non facere quia sequi commodi autem. Dicta autem sit sequi omnis impedit. Eligendi amet dolorum magnam repudiandae in a.
-
-Molestiae iusto ut exercitationem dolorem unde iusto tempora atque nihil. Voluptatem velit facere laboriosam nobis ea. Consequatur rerum velit ipsum ipsam. Et qui saepe consequatur minima laborum tempore voluptatum et. Quia eveniet eaque sequi consequatur nihil eos.
+{% /callout %} -->

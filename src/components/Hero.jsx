@@ -8,7 +8,7 @@ import { HeroBackground } from '@/components/HeroBackground'
 import blurCyanImage from '@/images/blur-cyan.png'
 import blurIndigoImage from '@/images/blur-indigo.png'
 
-const codeLanguage = 'bash'
+const codeLanguage = 'c' // I know it's not the right language, but it has more relevant syntax highlighting
 const code = `#!/bin/bash
 #SBATCH --job-name=test_job
 #SBATCH --output=test_job.out

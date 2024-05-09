@@ -1,8 +1,8 @@
 ---
-title: CacheAdvance.revert()
+title: Star HPC.revert()
 nextjs:
   metadata:
-    title: CacheAdvance.revert()
+    title: Star HPC.revert()
     description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

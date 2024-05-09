@@ -1,8 +1,8 @@
 ---
-title: CacheAdvance.regret()
+title: Star HPC.regret()
 nextjs:
   metadata:
-    title: CacheAdvance.regret()
+    title: Star HPC.regret()
     description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 
