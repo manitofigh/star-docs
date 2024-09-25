@@ -3,23 +3,18 @@ export const navigation = [
     title: 'Introduction',
     links: [
       { title: 'About Star', href: '/' },
-      { title: 'Quick Start', href: '/docs/installation' },
+      { title: 'Quickstart', href: '/docs/quickstart' },
     ],
   },
   {
-    title: 'Core concepts',
+    title: 'Getting Help',
     links: [
-      { title: 'Understanding caching', href: '/docs/understanding-caching' },
+      { title: 'FAQ', href: '/docs/faq' },
       {
-        title: 'Predicting user behavior',
-        href: '/docs/predicting-user-behavior',
+        title: 'How to write good support tickets',
+        href: '/docs/support-ticket',
       },
-      { title: 'Basics of time-travel', href: '/docs/basics-of-time-travel' },
-      {
-        title: 'Introduction to string theory',
-        href: '/docs/introduction-to-string-theory',
-      },
-      { title: 'The butterfly effect', href: '/docs/the-butterfly-effect' },
+      { title: 'Contact us', href: '/docs/contact-us' },
     ],
   },
   {
@@ -53,4 +48,4 @@ export const navigation = [
       { title: 'Design principles', href: '/docs/design-principles' },
     ],
   },
-]
+];
