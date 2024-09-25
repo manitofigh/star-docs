@@ -2,7 +2,7 @@
 
 ## Node.js version
 
-This project uses Next.js.
+Before getting started and using this project locally, you need to know this project uses Next.js.
 To use Next.js, you need Node.js version `18.18` or newer.
 
 Check your current node version use:
