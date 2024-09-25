@@ -74,7 +74,7 @@ Then, setup `mason.nvim` to ensure `prettier` is installed.
 
 Finally, configure `conform.nvim` to autoformat upon saving.
 
-If you use NeoVim, you can look at an example that has it setup at [this repo](https://github.com/manitofigh/nvim/blob/main/init.lua)
+If it helps, you can look at an example that has it setup at [this repo](https://github.com/manitofigh/nvim/blob/main/init.lua)
 
 ## Customizing
 
