@@ -18,7 +18,7 @@ See https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating to 
 After `nvm` is installed, run:
 
 ```bash
-nvm install 20 # As of today, the newest LTS version for node is 20.17.0
+nvm install 20 # As of today (Sept 25 2024), the newest LTS version for node is 20.17.0
 ```
 
 Followed by:
