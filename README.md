@@ -1,10 +1,37 @@
-# Syntax
+# Star Docs
 
-Syntax is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+## Node.js version
+
+This project uses Next.js.
+To use Next.js, you need Node.js version `18.18` or newer.
+
+Check your current node version use:
+
+```bash
+node --version
+```
+
+If it's below the required version, upgrade to the latest LTS version using `nvm` (Node Version Manager).
+
+See https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating to install `nvm`.
+
+After `nvm` is installed, run:
+
+```bash
+nvm install 20 # As of today, the newest LTS version for node is 20.17.0
+```
+
+Followed by:
+
+```bash
+nvm use 20
+```
+
+Double-check the version upgrade with `node --version`.
 
 ## Getting started
 
-To get started with this template, first install the npm dependencies:
+To get started with this template locally, first install the npm dependencies:
 
 ```bash
 npm install
@@ -17,6 +44,31 @@ npm run dev
 ```
 
 Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+**Note**: If another process is already using port 3000, the next port (e.g., 3001, 3002, etc.) is automatically tried sequentially until a free port is found. Just be aware of what is printed in your console.
+
+## Code Consistency
+
+### Prettier for code formatting
+
+Some argue formatting is purely opinionated, but you can't deny someone belongs to a mental hospital if they have 15 space indentation and no semiconols when working with e.g., JS/TS.
+
+If you've noticed, there is a `.prettierrc` file at the root of the app, indicating how the code is re-formatted upon each save.
+
+Whatever you indicate in that file, you can configure your editor so that on each save, it reformats your file based on the set rules.
+
+There's no black magic. It just takes in your file, sends it through Prettier, and replaces your current file with whatever Prettier spits out based on your `.prettierrc` file.
+
+**BUT**, this does not happen by default unless you have your editor set up in a way to recognize the `.prettierrc` file at the root of your directory, and trigger that functionality upon each save.
+
+#### VSCode
+
+Follow the steps at: https://www.digitalocean.com/community/tutorials/how-to-format-code-with-prettier-in-visual-studio-code#step-2-formatting-code-on-save
+
+#### NeoVim
+
+You need `conform.nvim`, `mason.nvim`, and `mason-lspconfig.nvim` installed.
+
+Then, setup `mason.nvim` to ensure `prettier` is installed.
 
 ## Customizing
 
@@ -28,17 +80,10 @@ This template includes a global search that's powered by the [FlexSearch](https:
 
 This feature requires no configuration, and works out of the box by automatically scanning your documentation pages to build its index. You can adjust the search parameters by editing the `/src/markdoc/search.mjs` file.
 
+Finally, configure `conform.nvim` to autoformat upon saving.
+
+If you use NeoVim, you can look at an example that has it setup at [this repo](https://github.com/manitofigh/nvim/blob/main/init.lua)
+
 ## License
 
 This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
-
-## Learn more
-
-To learn more about the technologies used in this site template, see the following resources:
-
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
-- [Markdoc](https://markdoc.io) - the official Markdoc documentation
-- [Algolia Autocomplete](https://www.algolia.com/doc/ui-libraries/autocomplete/introduction/what-is-autocomplete/) - the official Algolia Autocomplete documentation
-- [FlexSearch](https://github.com/nextapps-de/flexsearch) - the official FlexSearch documentation
