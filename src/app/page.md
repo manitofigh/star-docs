@@ -26,15 +26,15 @@ We know digesting all the 'overall' information at once — and possibly for the
 
 ### Software
 
-#### SLURM (Simple Linux Utility for Resource Management) 
-[Slurm](https://slurm.schedmd.com/documentation.html) is our chosen job scheduler and queueing system that efficiently manages resource allocation, ensuring everyone gets the right amount of resources at the right time. 
+#### SLURM (Simple Linux Utility for Resource Management)
 
-#### Apptainer (formerly Singularity) 
+[Slurm](https://slurm.schedmd.com/documentation.html) is our chosen job scheduler and queueing system that efficiently manages resource allocation, ensuring everyone gets the right amount of resources at the right time.
+
+#### Apptainer (formerly Singularity)
+
 [Apptainer](https://apptainer.org/), another major application on the cluster, is a containerization platform similar to [Docker](https://www.docker.com/) with the major difference that it runs under user privileges instead of `root`. This platform is enhanced by [NGC](https://www.nvidia.com/en-us/gpu-cloud/) (NVIDIA GPU Cloud) which provides access to a wide array of pre-built, GPU-optimized software containers for diverse applications. This integration saves all users a lot of time as they don’t need to set up the software applications from scratch and can just pull and use the NGC images with Apptainer.
 
 The cluster also supports various software applications tailored to different needs: [Python](https://docs.python.org/3.12/tutorial/index.html) and [R](https://www.r-project.org/) for data analysis, [MATLAB](https://www.mathworks.com/products/matlab.html) for technical computing, [Jupyter](https://jupyter.org/) for interactive projects, and [OpenMPI](https://www.open-mpi.org/) for parallel computing. [Anaconda](https://www.anaconda.com/) broadens these capabilities with packages for scientific computing, while [NetCDF](https://www.unidata.ucar.edu/software/netcdf/) manages large datasets. For big data tasks, [Hadoop](https://hadoop.apache.org/) and [Spark](https://spark.apache.org/) offer powerful processing tools.
-
-
 
 <!-- {% callout type="warning" title="Oh no! Something bad happened!" %}
 This is what a disclaimer message looks like. You might want to include inline `code` in it. Or maybe you’ll want to include a [link](/) in it. I don’t think we should get too carried away with other scenarios like lists or tables — that would be silly.
@@ -46,35 +46,35 @@ This is what a disclaimer message looks like. You might want to include inline `
 
 #### Compute Nodes
 
-* Two Apollo 6500 Gen10+ HPE nodes, *each* containing 8 NVIDIA A100 SXM GPUs. 
-* One HPE ProLiant DL385 Gen10+ v2, containing 2 A30 SXM NVIDIA GPUs.
+- Two Apollo 6500 Gen10+ HPE nodes, _each_ containing 8 NVIDIA A100 SXM GPUs.
+- One HPE ProLiant DL385 Gen10+ v2, containing 2 A30 SXM NVIDIA GPUs.
 
 ##### HPE Apollo 6500 Gen10
 
-| Attribute\Node Name          | gpu1                             | gpu2                             |
-|------------------------|----------------------------------|----------------------------------|
-| Model Name             | HPE ProLiant XL675d Gen10 Plus; Apollo 6500 Gen10 Plus Chassis | HPE ProLiant XL675d Gen10 Plus; Apollo 6500 Gen10 Plus Chassis |
-| Sockets                | 2                                | 2                                |
-| Cores per Socket       | 32                               | 32                               |
-| Threads per Core       | 2                                | 2                                |
-| Memory                 | 1024 GiB Total Memory (16 x 64GiB DIMM DDR4) | 1024 GiB Total Memory (16 x 64GiB DIMM DDR4) |
-| GPU                    | 8 SXM NVIDIA A100s               | 8 SXM NVIDIA A100s               |
-| Local Storage (Scratch space) | 407GB                       | 407GB                       |
-
+| Attribute\Node Name           | gpu1                                                           | gpu2                                                           |
+| ----------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| Model Name                    | HPE ProLiant XL675d Gen10 Plus; Apollo 6500 Gen10 Plus Chassis | HPE ProLiant XL675d Gen10 Plus; Apollo 6500 Gen10 Plus Chassis |
+| Sockets                       | 2                                                              | 2                                                              |
+| Cores per Socket              | 32                                                             | 32                                                             |
+| Threads per Core              | 2                                                              | 2                                                              |
+| Memory                        | 1024 GiB Total Memory (16 x 64GiB DIMM DDR4)                   | 1024 GiB Total Memory (16 x 64GiB DIMM DDR4)                   |
+| GPU                           | 8 SXM NVIDIA A100s                                             | 8 SXM NVIDIA A100s                                             |
+| Local Storage (Scratch space) | 407GB                                                          | 407GB                                                          |
 
 ##### HPE DL385 Gen10
 
-| Attribute\Node Name              | cn01                                      |
-|------------------------|-------------------------------------------|
-| Model Name             | HPE ProLiant DL385 Gen10 Plus v2          |
-| Sockets                | 2                                         |
-| Cores per Socket       | 32                                        |
-| Threads per Core       | 2                                         |
-| Memory                 | 256GiB Total Memory (16 x 16GiB DIMM DDR4)|
-| GPU                    | 2 SXM NVIDIA A30s                         | 
-| Local Storage (Scratch Space)         | 854G                                      |
+| Attribute\Node Name           | cn01                                       |
+| ----------------------------- | ------------------------------------------ |
+| Model Name                    | HPE ProLiant DL385 Gen10 Plus v2           |
+| Sockets                       | 2                                          |
+| Cores per Socket              | 32                                         |
+| Threads per Core              | 2                                          |
+| Memory                        | 256GiB Total Memory (16 x 16GiB DIMM DDR4) |
+| GPU                           | 2 SXM NVIDIA A30s                          |
+| Local Storage (Scratch Space) | 854G                                       |
 
 #### Storage System
+
 Our storage system contains of four HPE PFSS nodes, collectively offering a total of 63TB of storage. You can think of these four nodes as one unified 63TB storage unit as it is a **Parallel File System Storage** component. These nodes work in parallel and are all mounted under **one** mount point on the gpu nodes only (`/fs1`).
 
 ## Our vision
@@ -85,22 +85,17 @@ Making complex and time-intensive calculations simple and accessible.
 
 Our heart is set on creating a community where our cluster is a symbol of collaboration and discovery. We are wishing to provide a supportive space where researchers and students can express their scientific ideas and explore unchanted areas. We aim to make the complicated world of computational research a shared path of growth, learning, and significant discoveries for the ones that are eager to learn.
 
-
 ## Operations Team
 
-* Alexander Rosenberg
-* Mani Tofigh
-
+- Alexander Rosenberg
+- Mani Tofigh
 
 ## The Board
 
-* Edward H. Currie
-* Daniel P. Miller
-* Adam C. Durst
-* Jason D. Williams
-* Thomas G. Re
-* Oren Segal
-* John Ortega
-<!-- {% callout title="You should know!" %}
-This is what a disclaimer message looks like. You might want to include inline `code` in it. Or maybe you’ll want to include a [link](/) in it. I don’t think we should get too carried away with other scenarios like lists or tables — that would be silly.
-{% /callout %} -->
+- Edward H. Currie
+- Daniel P. Miller
+- Adam C. Durst
+- Jason D. Williams
+- Thomas G. Re
+- Oren Segal
+- John Ortega

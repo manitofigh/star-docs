@@ -1,14 +1,14 @@
-import { Fragment } from 'react'
-import Image from 'next/image'
-import clsx from 'clsx'
-import { Highlight } from 'prism-react-renderer'
+import { Fragment } from 'react';
+import Image from 'next/image';
+import clsx from 'clsx';
+import { Highlight } from 'prism-react-renderer';
 
-import { Button } from '@/components/Button'
-import { HeroBackground } from '@/components/HeroBackground'
-import blurCyanImage from '@/images/blur-cyan.png'
-import blurIndigoImage from '@/images/blur-indigo.png'
+import { Button } from '@/components/Button';
+import { HeroBackground } from '@/components/HeroBackground';
+import blurCyanImage from '@/images/blur-cyan.png';
+import blurIndigoImage from '@/images/blur-indigo.png';
 
-const codeLanguage = 'c' // I know it's not the right language, but it has more relevant syntax highlighting
+const codeLanguage = 'c'; // I know it's not the right language, but it has more relevant syntax highlighting
 const code = `#!/bin/bash
 #SBATCH --job-name=test_job
 #SBATCH --output=test_job.out
@@ -18,11 +18,9 @@ const code = `#!/bin/bash
 #SBATCH --mem=1G
 
 module load python3
-python3 my_script.py`
+python3 my_script.py`;
 
-const tabs = [
-  { name: 'batch-job.sbatch', isActive: true },
-]
+const tabs = [{ name: 'batch-job.sbatch', isActive: true }];
 
 function TrafficLightsIcon(props) {
   return (
@@ -31,7 +29,7 @@ function TrafficLightsIcon(props) {
       <circle cx="21" cy="5" r="4.5" />
       <circle cx="37" cy="5" r="4.5" />
     </svg>
-  )
+  );
 }
 
 export function Hero() {
@@ -172,5 +170,5 @@ export function Hero() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,18 +1,24 @@
-'use client';
-
 import Image from 'next/image';
+import StarHPCLogo from '@/images/star-hpc-logo.png';
 
-function LogomarkPaths() {
+function LogoImage() {
+  return <Image src={StarHPCLogo} width={50} height={50} alt="star-hpc-logo" />;
+}
+
+function LogoText() {
   return (
-    <Image
-      src="/images/star-hpc-logo.png"
-      width={50}
-      height={50}
-      alt="star-hpc-logo"
-    />
+    <div className="ml-2 flex flex-col">
+      <span className="text-lg font-bold">Star HPC</span>
+      <span className="text-xs">at Hofstra University</span>
+    </div>
   );
 }
 
 export function Logo() {
-  return <LogomarkPaths />;
+  return (
+    <div className="flex items-center">
+      <LogoImage />
+      <LogoText />
+    </div>
+  );
 }
