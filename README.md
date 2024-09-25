@@ -2,7 +2,7 @@
 
 ## Node.js version
 
-Before getting started with local development, you need to know this project uses [Next.js](https://nextjs.org/).
+Before getting started with local development: This project uses [Next.js](https://nextjs.org/).
 
 To use Next.js, you need Node.js version `18.18` or newer.
 
