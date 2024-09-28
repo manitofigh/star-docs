@@ -1,8 +1,25 @@
 # Star Docs
 
-## Node.js version
+## Getting started
 
-Before getting started with local development: This project uses [Next.js](https://nextjs.org/).
+To get started with this template locally, first install the npm dependencies:
+
+```bash
+npm install
+```
+
+Next, run the development server:
+
+```bash
+npm run dev
+```
+
+Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+**Note**: If another process is already using port 3000, the next port (e.g., 3001, 3002, etc.) is automatically tried sequentially until a free port is found. Just be aware of what is printed in your console.
+
+## Node.js version too low?
+
+Heads up: This project uses [Next.js](https://nextjs.org/).
 
 To use Next.js, you need Node.js version `18.18` or newer.
 
@@ -30,23 +47,6 @@ nvm use 20
 ```
 
 Double-check the version upgrade with `node --version`.
-
-## Getting started
-
-To get started with this template locally, first install the npm dependencies:
-
-```bash
-npm install
-```
-
-Next, run the development server:
-
-```bash
-npm run dev
-```
-
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
-**Note**: If another process is already using port 3000, the next port (e.g., 3001, 3002, etc.) is automatically tried sequentially until a free port is found. Just be aware of what is printed in your console.
 
 ## Code Consistency
 
