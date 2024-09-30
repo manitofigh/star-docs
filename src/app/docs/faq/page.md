@@ -30,6 +30,7 @@ If you are more of a visual person, run
 `ssh -p 5010 -o VisualHostKey=yes binary.star.hofstra.edu` and compare it to this visual
 key:
 
+```bash
     +--[ED25519 256]--+
     |E + ++  . .o=.+=.|
     |o=.=o..o . . +ooo|
@@ -41,14 +42,14 @@ key:
     | ..+o o          |
     |  .oo. .         |
     +----[SHA256]-----+
+```
 
 ## Installing software
 
 ### I need Python package X but the one on Star is too old or I cannot find it
 
 You can choose different Python versions with either the module system
-or using Anaconda/Miniconda. See here: `/software/modules` and
-`/software/python_r_perl`.
+or using Anaconda/Miniconda. See here: [Managing Modules](/docs/environment-modules#loading-and-managing-modules).
 
 In cases where this still doesn't solve your problem or you would like
 to install a package yourself, please read the next section below about

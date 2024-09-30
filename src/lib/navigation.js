@@ -18,30 +18,25 @@ export const navigation = [
     ],
   },
   {
-    title: 'Advanced guides',
+    title: 'Jobs',
     links: [
-      { title: 'Writing plugins', href: '/docs/writing-plugins' },
-      { title: 'Neuralink integration', href: '/docs/neuralink-integration' },
-      { title: 'Temporal paradoxes', href: '/docs/temporal-paradoxes' },
-      { title: 'Testing', href: '/docs/testing' },
-      { title: 'Compile-time caching', href: '/docs/compile-time-caching' },
+      { title: 'Jobs Overview', href: '/docs/jobs-overview' },
+      { title: 'Submitting Jobs', href: '/docs/submitting-jobs' },
+      { title: 'Managing Jobs', href: '/docs/managing-jobs' },
+    ],
+  },
+  {
+    title: 'Software',
+    links: [
       {
-        title: 'Predictive data generation',
-        href: '/docs/predictive-data-generation',
+        title: 'Environment Modules',
+        href: '/docs/environment-modules',
       },
+      { title: 'Virtual Environment', href: '/docs/virtual-environment' },
     ],
   },
   {
-    title: 'API reference',
-    links: [
-      { title: 'Star HPC.predict()', href: '/docs/cacheadvance-predict' },
-      { title: 'Star HPC.flush()', href: '/docs/cacheadvance-flush' },
-      { title: 'Star HPC.revert()', href: '/docs/cacheadvance-revert' },
-      { title: 'Star HPC.regret()', href: '/docs/cacheadvance-regret' },
-    ],
-  },
-  {
-    title: 'Contributing',
+    title: 'Storage',
     links: [
       { title: 'How to contribute', href: '/docs/how-to-contribute' },
       { title: 'Architecture guide', href: '/docs/architecture-guide' },
